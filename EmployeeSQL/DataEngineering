@@ -43,6 +43,8 @@ CREATE TABLE salaries(
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
+#DATA ANALYSIS
+
 #list the following details of each employee: number, last name, first name, sex, and salary
 SELECT employees.emp_no, employees.last_name, employees.first_name, employees.sex, salaries.salary
 FROM employees
@@ -61,6 +63,9 @@ SELECT employees.emp_no, employees.last_name, employees.first_name, departments.
 FROM employees
 JOIN departments ON departments.dept_no = dept_emp.dept_no;
 #List firt name, last name, and sex for employees whose first name is Hercules and last name begins with  begins "B"
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name = "Hercules" AND last_name like "B";
 #List all employees in the Sales department, including their employee number, last name, first name, and department name
 #list all employees in the Sales and Development departments, including their employee number, last name, first name, and department name
 #In descedning order, list the frequency count of employee last names
