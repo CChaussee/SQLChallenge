@@ -67,5 +67,11 @@ SELECT first_name, last_name, sex
 FROM employees
 WHERE first_name = "Hercules" AND last_name like "B";
 #List all employees in the Sales department, including their employee number, last name, first name, and department name
+SELECT departments.dept_name, employees.emp_no, employees.last_name, employees.first_name
+FROM employees
+JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
+JOIN departments ON dept_emp.dept_no = departments.dept_no
+#Review csv for department numbers
+WHERE departments.dept_no = 'd007';
 #list all employees in the Sales and Development departments, including their employee number, last name, first name, and department name
 #In descedning order, list the frequency count of employee last names
