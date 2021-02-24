@@ -1,7 +1,7 @@
 #creating a table for each csv (six in total)
 CREATE TABLE titles(
     title_id VARCHAR PRIMARY KEY,
-    title VARCHAR NOT NUL
+    title VARCHAR NOT NULL
 );
 
 CREATE TABLE employees(
